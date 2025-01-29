@@ -16,7 +16,7 @@ datasource db {
 
 model Rooms {
     id           String  @id @default(cuid())
-    room_number  Int
+    room_number  Int @unique
     floor        Int
     is_available Boolean @default(true)
 }
